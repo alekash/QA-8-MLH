@@ -18,15 +18,12 @@ describe('Required fields and story created', function () {
     });
 
     it('TC-027 User is redirected to the story page', function () {
-        browser.refresh();
         $(sel.name).setValue("Little Green Man 009");
         $$(sel.radioButtons)[0].click();
         $(sel.age).setValue('1234567890');
         $(sel.storyType).click();
         $$(sel.storyList)[6].click();
         $(sel.submit).click();
-
-        browser.pause(2000);
         let tryAgainBtn = $(sel.tryAgain).isDisplayed();
         expect(tryAgainBtn).toEqual(true);
     });
@@ -39,8 +36,6 @@ describe('Required fields and story created', function () {
         $(sel.storyType).click();
         $$(sel.storyList)[6].click();
         $(sel.submit).click();
-
-        browser.pause(2000);
         let storyHead= $(sel.storyHeader).getText();
         expect(storyHead).toEqual(exp.storyHeader);
     });
@@ -68,8 +63,6 @@ describe('Required fields and story created', function () {
         $(sel.storyType).click();
         $$(sel.storyList)[6].click();
         $(sel.submit).click();
-
-        browser.pause(2000);
         let storyMoral = $$(sel.storyB)[1].getText();
         expect(storyMoral).toEqual(exp.storyMoral);
     });
