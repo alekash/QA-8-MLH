@@ -1,6 +1,7 @@
 import sel from '../../data/selectors';
 import exp from '../../data/expected.json';
 import {name, gender, age, story} from '../../data/testData';
+import inputValues4 from '../../helpers/methods';
 
 describe('Required fields and story created', function () {
 
@@ -8,7 +9,7 @@ describe('Required fields and story created', function () {
         browser.url('');
     });
 
-    it.only('TC-026 Submit button is enable after fields 1 - 4 are filled in with valid value', function () {
+    it('TC-026 Submit button is enable after fields 1 - 4 are filled in with valid value', function () {
         $(sel.name).setValue(name.default);
         $$(sel.radioButtons)[gender.he].click();
         $(sel.age).setValue(age.default);
@@ -20,11 +21,8 @@ describe('Required fields and story created', function () {
     });
 
     it('TC-027 User is redirected to the story page', function () {
-        $(sel.name).setValue("Little Green Man 009");
-        $$(sel.radioButtons)[0].click();
-        $(sel.age).setValue('1234567890');
-        $(sel.storyType).click();
-        $$(sel.storyList)[6].click();
+        browser.refresh();
+        inputValues4(name.default,gender.he, age.default, story.comedy);
         $(sel.submit).click();
         let tryAgainBtn = $(sel.tryAgain).isDisplayed();
         expect(tryAgainBtn).toEqual(true);
