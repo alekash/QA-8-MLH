@@ -3,6 +3,7 @@ const elements = {
     "instruction": "p",
     "requiredLabels": ".ant-form-item-required",
     "name": "#name",
+    "overValueMessage": ".ant-form-item-explain-error",
     "radioButtons": ".ant-radio",
     "radioButtonsLabel": ".ant-radio-wrapper",
     "age": "#age",
