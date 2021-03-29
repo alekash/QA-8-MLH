@@ -71,7 +71,7 @@ import {name, gender, age, story} from '../../data/testData'
         it('TC-040 Name field does not accept empty Name field', function () {
             $(sel.name).setValue(name.default);
             $(sel.name).clearValue();
-            let errorMessage = $(sel.overValueMessage).isDisplayed();
+            let errorMessage = $(sel.nameError).isDisplayed();
             expect(errorMessage).toEqual(true);
         });
     });

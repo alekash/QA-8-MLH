@@ -71,18 +71,20 @@ describe('Age field suit', function () {
             expect(decrease).toEqual(age.min);
         });
 
-        it('TC-064 User can copy/paste the number', function () {
-            let a = $(sel.name).setValue(1234);
-            let b = $(sel.name).getValue(a);
-            let c = $(sel.age).setValue(b);
-            expect(c).toEqual(a);
-        });
+        // it('TC-064 User can copy/paste the number', function () {
+        //     let a = $(sel.name).setValue(1234);
+        //     let b = $(sel.name).getValue(a);
+        //     let c = $(sel.age).setValue(b);
+        //     expect(c).toEqual(a);
+        // });
 
     });
 
     // describe('Negative cases', function () {
     //
-    //     it('TC-xxx Age = 0', function () {
+    //     it('TC-065 Age input field accepts 13 digits', function () {
+    //         $(sel.age).setValue(age.thirteenDigits);
+    //         error
     //         expect(submitBtn).toEqual(true);
     //     });
     //
