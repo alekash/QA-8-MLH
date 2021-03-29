@@ -10,7 +10,11 @@ const gender = {
 
 const age = {
     "default": "1234567890",
-    "min": "1"
+    "min": "1",
+    "two": "2",
+    "max": "999999999999",
+    "zerosBeforeNum": "000008",
+    "spacesBeforeNum": "    63"
 }
 
 const story = {

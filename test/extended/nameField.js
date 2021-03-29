@@ -57,7 +57,7 @@ import exp from '../../data/expected.json';
         });
 
         it('TC-038 Name field dose not accepts 71 symbols', function () {
-            let overValue = $(sel.name).setValue("wwwwwwwwwwwwwwwwww20wwwwwwwwwwwwwwwwww40wwwwwwwwwwwwwwwwww60wwwwwwwww71");
+            $(sel.name).setValue("wwwwwwwwwwwwwwwwww20wwwwwwwwwwwwwwwwww40wwwwwwwwwwwwwwwwww60wwwwwwwww71");
             let errorMessage = $(sel.overValueMessage).isDisplayed();
             expect(errorMessage).toEqual(true);
         });
@@ -69,8 +69,9 @@ import exp from '../../data/expected.json';
         // });
 
         it('TC-040 Name field does not accept empty Name field', function () {
-            let typeInField = $(sel.name).setValue("LittleGreenMan009");
-            let emptyField = $(sel.name).clearValue();
-            expect(.toEqual(lettersAndNumbers);
+            $(sel.name).setValue("LittleGreenMan009");
+            $(sel.name).clearValue();
+            let errorMessage = $(sel.overValueMessage).isDisplayed();
+            expect(errorMessage).toEqual(true);
         });
     });
