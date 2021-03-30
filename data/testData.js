@@ -19,14 +19,17 @@ const gender = {
 
 const age = {
     "default": "1234567890",
+    "zero": "0",
     "min": "1",
     "two": "2",
     "max": "999999999999",
     "zerosBeforeNum": "000008",
     "spacesBeforeNum": "    63",
-    "thirteenDigits": "1234567890123"
+    "thirteenDigits": "1000000000000",
+    "symbols": "><?|/*",
+    "negativeNum": "-123",
+    "float": "0.123"
 }
-
 const story = {
     "overcomingTheMonster": 0,
     "rebirth": 1,
